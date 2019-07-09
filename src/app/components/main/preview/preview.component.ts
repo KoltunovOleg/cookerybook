@@ -1,15 +1,21 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { BackendApiService } from 'src/app/services/backend-api.service';
 
 @Component({
-  selector: 'app-preview',
-  templateUrl: './preview.component.html',
-  styleUrls: ['./preview.component.scss']
+	selector: 'app-preview',
+	templateUrl: './preview.component.html',
+	styleUrls: ['./preview.component.scss']
 })
 export class PreviewComponent implements OnInit {
 
-  constructor() { }
+	constructor(
+		private BackendApi: BackendApiService
+	) { }
 
-  ngOnInit() {
-  }
+	ngOnInit() {
+		this.BackendApi.getRecipes().subscribe((res) => {
+			console.log(res);
+		})
+	}
 
 }
