@@ -21,3 +21,8 @@ export interface IUser {
 	name: string;
 	surname: string;
 }
+
+export interface IConfig {
+	adminNmae: string;
+	permission?: string[];
+}
