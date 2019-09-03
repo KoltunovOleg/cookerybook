@@ -1,6 +1,5 @@
 import { Action } from '@ngrx/store';
 import { IConfig } from 'src/app/interfaces/interfaces';
-import { type } from 'os';
 
 export enum EConfigActions {
   GetConfig = '[Config] Get Config',
